@@ -8,8 +8,36 @@
 #import "YLPClient+Reservation.h"
 #import "YLPQuery.h"
 #import "YLPQueryPrivate.h"
+#import "YLPClientPrivate.h"
+#import "YLPSearch.h"
+#import "YLPResponsePrivate.h"
 
 @implementation YLPClient (Reservation)
+
+// GET https://api.yelp.com/v3/bookings/{business-id}/openings
+- (void)bookBusinessID:(NSString *)businessID
+	   reservationTime:(NSString *)time
+	   reservationDate:(NSString *)date
+	 reservationCovers:(NSUInteger)covers
+	 completionHandler:(YLPSearchCompletionHandler)completionHandler {
+	NSString *path = [NSString stringWithFormat:@"/v3/bookings/%@/openings", businessID];
+	NSDictionary *params = @{
+		@"covers" : @(covers),
+		@"date" : date,
+		@"time" : time
+		};
+	NSURLRequest *req = [self requestWithPath:path params:params];
+	
+    [self queryWithRequest:req completionHandler:^(NSDictionary *responseDict, NSError *error) {
+        if (error) {
+            completionHandler(nil, error);
+        } else {
+            YLPSearch *search = [[YLPSearch alloc] initWithDictionary:responseDict];
+            completionHandler(search, nil);
+        }
+		
+    }];
+}
 
 - (void)searchWithLocation:(NSString *)location
 					  term:(NSString *)term

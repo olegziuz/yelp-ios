@@ -9,6 +9,8 @@
 #import "YLPDetailBusinessViewController.h"
 #import <YelpAPI/YLPBusiness.h>
 #import <YelpAPI/YLPLocation.h>
+#import "YLPAppDelegate.h"
+#import "YLPClient+Reservation.h"
 
 @interface YLPDetailBusinessViewController ()
 @property (nonatomic) IBOutlet UILabel *businessName;
@@ -27,6 +29,13 @@
     self.businessAddress.text = self.business.location.address[0];
     self.transactions.text = [self.business.transactions componentsJoinedByString:@","];
     [self.transactions sizeToFit];
+	
+	[[YLPAppDelegate sharedClient] bookBusinessID:self.business.identifier reservationTime:self.reservationTime reservationDate:self.reservationDate reservationCovers:self.reservationCovers completionHandler: ^
+		(YLPSearch *search, NSError* error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"error %@", error.description);
+            });
+	}];
 }
 
 @end

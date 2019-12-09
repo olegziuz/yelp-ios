@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YLPClient (Reservation)
 
+- (void)bookBusinessID:(NSString *)businessID
+	   reservationTime:(NSString *)time
+	   reservationDate:(NSString *)date
+	 reservationCovers:(NSUInteger)covers
+	 completionHandler:(YLPSearchCompletionHandler)completionHandler;
+
 - (void)searchWithLocation:(NSString *)location
 					  term:(nullable NSString *)term
 					 limit:(NSUInteger)limit

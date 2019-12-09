@@ -12,5 +12,8 @@
 
 @interface YLPDetailBusinessViewController : UIViewController
 @property (nonatomic) YLPBusiness *business;
+@property (nonatomic, copy) NSString *reservationTime;
+@property (nonatomic, copy) NSString *reservationDate;
+@property (nonatomic, assign) NSUInteger reservationCovers;
 
 @end

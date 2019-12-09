@@ -67,6 +67,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     YLPDetailBusinessViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"YLPDetailBusinessViewController"];
     vc.business = self.search.businesses[indexPath.item];
+    vc.reservationTime = RESERVATION_TIME;
+	vc.reservationDate = RESERVATION_DATE;
+	vc.reservationCovers = RESERVATION_COVERS;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
