@@ -14,6 +14,7 @@
 @property (nonatomic) IBOutlet UILabel *businessName;
 @property (nonatomic) IBOutlet UILabel *businessAddress;
 @property (nonatomic) IBOutlet UILabel *businessPhone;
+@property (nonatomic) IBOutlet UILabel *transactions;
 @end
 
 @implementation YLPDetailBusinessViewController
@@ -24,6 +25,8 @@
     self.businessName.text = self.business.name;
     self.businessPhone.text = self.business.phone;
     self.businessAddress.text = self.business.location.address[0];
+    self.transactions.text = [self.business.transactions componentsJoinedByString:@","];
+    [self.transactions sizeToFit];
 }
 
 @end

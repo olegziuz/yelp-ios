@@ -10,6 +10,8 @@
 
 @import YelpAPI;
 
+#define API_KEY @"uZLWxD2Mm-3IxbdIPlyRfC13w4-fMwbc3Il65PwdVhuz78y1lQKRn1B4hYI3xAMANglWgGrN7a8hZdNv7zM2byZ2WLmCIk-ZQzXErZoCk4vdMQTkESdsWEI0yZfrXXYx"
+
 @interface YLPAppDelegate ()
 @property (strong, nonatomic) YLPClient *client;
 @end
@@ -24,8 +26,8 @@
 #pragma mark UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    #warning Fill in the API key below with your developer v3 key.
-    self.client = [[YLPClient alloc] initWithAPIKey:@""];
+    
+    self.client = [[YLPClient alloc] initWithAPIKey:API_KEY];
 
     return YES;
 }

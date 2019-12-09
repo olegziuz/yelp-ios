@@ -13,6 +13,14 @@
 #import <YelpAPI/YLPSortType.h>
 #import <YelpAPI/YLPSearch.h>
 #import <YelpAPI/YLPBusiness.h>
+#import "YLPClient+Reservation.h"
+
+#define LOCATION @"San Francisco, CA"
+#define TERM @"restaurants"
+#define LIMIT 10
+#define RESERVATION_TIME @"19:00"
+#define RESERVATION_DATE @"2019-12-10"
+#define RESERVATION_COVERS 2
 
 @interface YLPSearchTableViewController ()
 @property (nonatomic) YLPSearch *search;
@@ -22,8 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[YLPAppDelegate sharedClient] searchWithLocation:@"San Francisco, CA" term:nil limit:5 offset:0 sort:YLPSortTypeDistance completionHandler:^
+	
+	//    [[YLPAppDelegate sharedClient] searchWithLocation:LOCATION term:TERM limit:LIMIT offset:0 sort:YLPSortTypeBestMatched completionHandler:^
+	
+	[[YLPAppDelegate sharedClient] searchWithLocation:LOCATION term:TERM limit:LIMIT offset:0 sort:YLPSortTypeBestMatched reservationTime:RESERVATION_TIME reservationDate:RESERVATION_DATE reservationCovers:RESERVATION_COVERS completionHandler:^
         (YLPSearch *search, NSError* error) {
             self.search = search;
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -39,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return LIMIT;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

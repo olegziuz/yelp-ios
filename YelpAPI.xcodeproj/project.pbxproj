@@ -68,6 +68,8 @@
 		13BE49691D2056C70002262E /* YLPQueryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BE49681D2056C70002262E /* YLPQueryTestCase.m */; };
 		13D8661E1DDE402D0051C1A0 /* NSDictionary+YLPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D8661C1DDE402D0051C1A0 /* NSDictionary+YLPUtils.m */; };
 		2938CD961893BBC9FB96A9A1 /* Pods_YelpAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940F602628A3DC514173CCBB /* Pods_YelpAPI_Example.framework */; };
+		3269AD2C239D0137009DB7EB /* YLPClient+Reservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3269AD2A239D0137009DB7EB /* YLPClient+Reservation.h */; };
+		3269AD2D239D0137009DB7EB /* YLPClient+Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3269AD2B239D0137009DB7EB /* YLPClient+Reservation.m */; };
 		460A04AD1EBEA6760086B7DE /* YLPAutocompleteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4606FCFD1EBE826700191DB9 /* YLPAutocompleteTableViewController.m */; };
 		46BDE42D1EC8B05800C32067 /* autocomplete_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BDE42C1EC8B05800C32067 /* autocomplete_response.json */; };
 		46BDE42F1EC8B0D400C32067 /* YLPAutocompleteClientTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE42E1EC8B0D400C32067 /* YLPAutocompleteClientTestCase.m */; };
@@ -185,6 +187,8 @@
 		13BE49681D2056C70002262E /* YLPQueryTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPQueryTestCase.m; sourceTree = "<group>"; };
 		13D8661C1DDE402D0051C1A0 /* NSDictionary+YLPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YLPUtils.m"; sourceTree = "<group>"; };
 		2E0DC5F670084B64ECD1DB90 /* Pods-YelpAPI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpAPI_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-YelpAPI_Example/Pods-YelpAPI_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3269AD2A239D0137009DB7EB /* YLPClient+Reservation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YLPClient+Reservation.h"; sourceTree = "<group>"; };
+		3269AD2B239D0137009DB7EB /* YLPClient+Reservation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YLPClient+Reservation.m"; sourceTree = "<group>"; };
 		4606FCFC1EBE826700191DB9 /* YLPAutocompleteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPAutocompleteTableViewController.h; sourceTree = "<group>"; };
 		4606FCFD1EBE826700191DB9 /* YLPAutocompleteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPAutocompleteTableViewController.m; sourceTree = "<group>"; };
 		46BDE42C1EC8B05800C32067 /* autocomplete_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autocomplete_response.json; sourceTree = "<group>"; };
@@ -418,6 +422,8 @@
 				13640F171DB2C7ED005F551B /* Supporting Files */,
 				13640F361DB2CAA1005F551B /* YLPAppDelegate.h */,
 				13640F371DB2CAA1005F551B /* YLPAppDelegate.m */,
+				3269AD2A239D0137009DB7EB /* YLPClient+Reservation.h */,
+				3269AD2B239D0137009DB7EB /* YLPClient+Reservation.m */,
 				4606FCFC1EBE826700191DB9 /* YLPAutocompleteTableViewController.h */,
 				4606FCFD1EBE826700191DB9 /* YLPAutocompleteTableViewController.m */,
 				13640F381DB2CAA1005F551B /* YLPBusinessViewController.h */,
@@ -478,6 +484,7 @@
 				134DA9B71CBF253B008DD68F /* YLPClient.h in Headers */,
 				134DA9C21CBF253B008DD68F /* YLPBusiness.h in Headers */,
 				46DFA9371EBD81C3002C0277 /* YLPAutocomplete.h in Headers */,
+				3269AD2C239D0137009DB7EB /* YLPClient+Reservation.h in Headers */,
 				130408E81DBAB04400E44AC6 /* YLPBusinessReviews.h in Headers */,
 				134DA9B11CBF253B008DD68F /* YLPClient+Business.h in Headers */,
 				130408E41DBAAA4600E44AC6 /* YLPClient+Reviews.h in Headers */,
@@ -502,7 +509,6 @@
 				134DA8B51CBF2484008DD68F /* Frameworks */,
 				134DA8B61CBF2484008DD68F /* Headers */,
 				134DA8B71CBF2484008DD68F /* Resources */,
-				64E31BA471F28383C73E0100 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -522,7 +528,6 @@
 				134DA9EE1CBF2CC2008DD68F /* Frameworks */,
 				134DA9EF1CBF2CC2008DD68F /* Resources */,
 				546A2D34FE3A722EE23D10B7 /* [CP] Embed Pods Frameworks */,
-				19D9B2DFE6C6903055DDC1A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -543,8 +548,6 @@
 				13640F121DB2C7ED005F551B /* Frameworks */,
 				13640F131DB2C7ED005F551B /* Resources */,
 				13640F511DB2CBCB005F551B /* Embed Frameworks */,
-				BA5D51B33FEC3FC9B6DD798D /* [CP] Embed Pods Frameworks */,
-				8EDD71EF72B9C9588598EA79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -569,7 +572,7 @@
 					};
 					134DA9F01CBF2CC2008DD68F = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					13640F141DB2C7ED005F551B = {
 						CreatedOnToolsVersion = 8.0;
@@ -631,49 +634,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19D9B2DFE6C6903055DDC1A4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpAPITests/Pods-YelpAPITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		546A2D34FE3A722EE23D10B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YelpAPITests/Pods-YelpAPITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpAPITests/Pods-YelpAPITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64E31BA471F28383C73E0100 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpAPI/Pods-YelpAPI-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YelpAPITests/Pods-YelpAPITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		771770F39E768523A1415BF1 /* [CP] Check Pods Manifest.lock */ = {
@@ -682,28 +660,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YelpAPITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8EDD71EF72B9C9588598EA79 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpAPI_Example/Pods-YelpAPI_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B74EBF92BEE960232D1A2662 /* [CP] Check Pods Manifest.lock */ = {
@@ -712,28 +678,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YelpAPI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BA5D51B33FEC3FC9B6DD798D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpAPI_Example/Pods-YelpAPI_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D90EF39181B89E39CA3F0F64 /* [CP] Check Pods Manifest.lock */ = {
@@ -742,13 +696,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YelpAPI_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -761,6 +718,7 @@
 				134DA9BC1CBF253B008DD68F /* YLPCoordinate.m in Sources */,
 				134DA9C31CBF253B008DD68F /* YLPBusiness.m in Sources */,
 				46DFA9381EBD81C3002C0277 /* YLPAutocomplete.m in Sources */,
+				3269AD2D239D0137009DB7EB /* YLPClient+Reservation.m in Sources */,
 				130408E51DBAAA4600E44AC6 /* YLPClient+Reviews.m in Sources */,
 				130408E91DBAB04400E44AC6 /* YLPBusinessReviews.m in Sources */,
 				46DFA9301EBD7E44002C0277 /* YLPClient+Autocomplete.m in Sources */,
@@ -990,6 +948,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "YelpAPITests/YelpAPITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1015,6 +975,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "YelpAPITests/YelpAPITests-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

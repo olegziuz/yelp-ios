@@ -84,17 +84,28 @@
     if (self.radiusFilter > 0) {
         params[@"radius"] = @(@(round(self.radiusFilter)).intValue);
     }
-    if (self.dealsFilter && self.hotAndNewFilter) {
-        params[@"attributes"] = @"deals,hot_and_new";
-    } else if (self.dealsFilter) {
-        params[@"attributes"] = @"deals";
-    } else if (self.hotAndNewFilter) {
-        params[@"attributes"] = @"hot_and_new";
-    }
     if (self.openNow && self.openAt == 0) {
         params[@"open_now"] = @(true);
     }
-
+	
+    NSMutableArray *attributes = [NSMutableArray array];
+    if (self.dealsFilter) {
+		[attributes addObject:@"deals"];
+	}
+	if (self.hotAndNewFilter) {
+		[attributes addObject:@"hot_and_new"];
+	}
+	if (self.reservation_time && self.reservation_date && self.reservation_covers) {
+		[attributes addObject:@"reservation"];
+		params[@"reservation_time"] = self.reservation_time;
+		params[@"reservation_date"] = self.reservation_date;
+		params[@"reservation_covers"] = @(self.reservation_covers);
+	}
+	
+	if (0 != attributes.count) {
+		params[@"attributes"] = [attributes componentsJoinedByString:@","];
+	}
+	
     return params;
 }
 

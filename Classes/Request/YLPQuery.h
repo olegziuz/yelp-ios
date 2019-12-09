@@ -87,6 +87,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (assign, nonatomic) BOOL hotAndNewFilter;
 
+/**
+ The time of the requested reservation, format is HH:MM
+ */
+@property (copy, nonatomic, nullable) NSString *reservation_time;
+
+/**
+ The date for the reservation, format is YYYY-mm-dd
+ */
+@property (copy, nonatomic, nullable) NSString *reservation_date;
+
+/**
+ How many people are attending the reservation (min. value is 1; max value is 10).
+ */
+@property (assign, nonatomic) NSUInteger reservation_covers;
+
 @end
 
 NS_ASSUME_NONNULL_END
